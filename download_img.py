@@ -16,7 +16,7 @@ class DownloadImg:
     # Requests
     # 
     """
-    def requestd(self, url, st = False):
+    def request(self, url, st = False):
         return requests.get(url, stream=st)
 
     """
@@ -47,7 +47,7 @@ class DownloadImg:
         try:
             path = '{path}/{name}'.format(path = image_path, name = image_name)
             fileImage = open(path, 'wb')
-            fileImage.write(self.requestd(url, True).content)
+            fileImage.write(self.request(url, True).content)
             fileImage.close()
         except IOError:
             print('Download: {name}\t\t[error]'.format(name = image_name))
@@ -90,7 +90,6 @@ class DownloadImg:
 # main
 def main():
     img1 = DownloadImg()
-    img1.create_directory('nice')
     img1.download('https://images.freeimages.com/images/large-previews/dfa/jungle-1377573.jpg', 'uploads', 'image1.jpg')
 
 # run
