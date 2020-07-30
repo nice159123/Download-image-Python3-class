@@ -63,7 +63,7 @@ def download(self, url, image_path, image_name):
         print('Download: {name}\t\t[success]'.format(name = image_name))
         return True
 ```
-## create_directory(directory_name[string])
+## createDirectory(directory_name[string])
 สร้าง Folder
 ```
 """
@@ -71,7 +71,7 @@ def download(self, url, image_path, image_name):
 # Create Directory
 # 
 """
-def create_directory(self, directory_name):
+def createDirectory(self, directory_name):
     try:
         if not os.path.exists(directory_name):
            os.makedirs(directory_name)
@@ -82,7 +82,7 @@ def create_directory(self, directory_name):
         print ("Successfully created the directory %s" % directory_name)
         return True
 ```
-## delete_directory(directory_name[string])
+## deleteDirectory(directory_name[string])
 ลบ Folder
 ```
 """
@@ -90,7 +90,7 @@ def create_directory(self, directory_name):
 # Delete Directory
 # 
 """
-def delete_directory(self, directory_name):
+def deleteDirectory(self, directory_name):
     try:
         if not os.path.exists(directory_name):
            os.rmdir(directory_name)
